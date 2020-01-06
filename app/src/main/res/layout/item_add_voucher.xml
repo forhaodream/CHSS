@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_gray"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_130"
+        android:layout_margin="@dimen/dp_10"
+        android:background="@drawable/bg_card_white">
+
+        <RelativeLayout
+            android:id="@+id/item_add_voucher_card"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_86"
+            android:layout_margin="@dimen/dp_8"
+            android:background="@mipmap/voucher">
+
+            <com.makeramen.roundedimageview.RoundedImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/item_add_voucher_head"
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="@dimen/dp_60"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:scaleType="fitCenter"
+                android:src="@color/black"
+                app:riv_oval="true"
+                app:riv_tile_mode="clamp" />
+
+
+            <TextView
+                android:id="@+id/item_add_voucher_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/item_add_voucher_head"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:layout_toRightOf="@id/item_add_voucher_head"
+                android:text="精品羔羊肉一盘"
+                android:textColor="@color/text_red_color"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/item_add_voucher_sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/item_add_voucher_title"
+                android:layout_alignLeft="@id/item_add_voucher_title"
+                android:layout_marginTop="@dimen/dp_4"
+                android:text="绵羊牧场代金券"
+                android:textColor="#ff696868"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/item_add_voucher_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/item_add_voucher_sub"
+                android:layout_alignLeft="@id/item_add_voucher_title"
+                android:layout_marginTop="@dimen/dp_6"
+                android:text="有效期：2019.10.8 -2019.11.8 "
+                android:textColor="#ff696868"
+                android:textSize="10sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/total_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_add_voucher_card"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_4"
+            android:textColor="#ff333333"
+            android:textSize="12sp" />
+
+        <CheckBox
+            android:id="@+id/item_add_voucher_check"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_selector"
+            android:button="@null" />
+    </RelativeLayout>
+
+</LinearLayout>

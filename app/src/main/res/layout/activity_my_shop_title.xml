@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/f3">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_12"
+        android:background="@drawable/bg_card_white">
+
+        <TextView
+            android:id="@+id/my_shop_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_17"
+            android:layout_marginTop="@dimen/dp_28"
+            android:text="绵羊牧场串店（临波路店）"
+            android:textColor="#ff000000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ch.ielse.view.SwitchView
+            android:id="@+id/my_shop_switch"
+            android:layout_width="@dimen/dp_43"
+            android:layout_height="@dimen/dp_25"
+            android:layout_alignTop="@id/my_shop_title"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_10"
+            app:isOpened="false"
+            app:offColor="#A3A3A3"
+            app:offColorDark="#A3A3A3"
+            app:primaryColor="@color/color_red_theme" />
+
+        <TextView
+            android:id="@+id/shop_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/my_shop_switch"
+            android:layout_alignRight="@id/my_shop_switch"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="营业中"
+            android:textColor="#ff323232"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/my_shop_image"
+            android:layout_width="@dimen/dp_88"
+            android:layout_height="@dimen/dp_88"
+            android:layout_below="@id/my_shop_title"
+            android:layout_marginLeft="@dimen/dp_18"
+            android:layout_marginTop="@dimen/dp_16"
+            android:scaleType="fitXY"
+            android:src="@color/black" />
+
+        <com.sheepshop.businessside.weight.MyRatingBar
+            android:id="@+id/my_shop_ratingbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/my_shop_image"
+            android:layout_marginLeft="@dimen/dp_17"
+            android:layout_toRightOf="@id/my_shop_image"
+            app:clickable="false"
+            app:starCount="5"
+            app:starEmpty="@mipmap/star_empty"
+            app:starFill="@mipmap/star_all"
+            app:starHalf="@mipmap/star_half"
+            app:starImageSize="15dp"
+            app:stepSize="Half" />
+
+        <TextView
+            android:id="@+id/my_shop_ratingbar_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/my_shop_ratingbar"
+            android:layout_toRightOf="@id/my_shop_ratingbar"
+            android:text="3.5分"
+            android:textColor="#ff323232"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/my_shop_ratingbar_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/my_shop_ratingbar"
+            android:layout_alignLeft="@id/my_shop_ratingbar"
+            android:layout_marginTop="@dimen/dp_30"
+            android:maxEms="13"
+            android:text="浑南区临波路11号（近浑南红星美凯龙）"
+            android:textColor="#ff333333"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/my_shop_can_use"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/my_shop_image"
+            android:layout_alignLeft="@id/my_shop_image"
+            android:layout_marginTop="@dimen/dp_20"
+            android:text="今日兑换20张"
+            android:textColor="#ff323232"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/my_shop_all_use"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/my_shop_can_use"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_30"
+            android:text="总计200张"
+            android:textColor="#ff323232"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_52"
+            android:layout_below="@id/my_shop_can_use"
+            android:layout_marginTop="@dimen/dp_10"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/add_card"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawableLeft="@mipmap/add_card"
+                    android:drawablePadding="@dimen/dp_4"
+                    android:text="添加代金券"
+                    android:textSize="@dimen/sp_13" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="0.2dp"
+                android:layout_height="match_parent"
+                android:background="@color/bg_gray" />
+
+            <RelativeLayout
+                android:id="@+id/manager_card"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawableLeft="@mipmap/manager_card"
+                    android:drawablePadding="@dimen/dp_4"
+                    android:text="代金券管理"
+                    android:textSize="@dimen/sp_13" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="0.2dp"
+                android:layout_height="match_parent"
+                android:background="@color/bg_gray" />
+
+            <RelativeLayout
+                android:id="@+id/list_card"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawableLeft="@mipmap/list_card"
+                    android:drawablePadding="@dimen/dp_4"
+                    android:text="兑换列表"
+                    android:textSize="@dimen/sp_13" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

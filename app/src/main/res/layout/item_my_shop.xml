@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/item_my_shop_head"
+        android:layout_width="@dimen/dp_22"
+        android:layout_height="@dimen/dp_22"
+        android:layout_marginLeft="@dimen/dp_12"
+        android:layout_marginTop="@dimen/dp_12"
+        android:src="@mipmap/orange_yuan"
+        app:riv_oval="true" />
+
+    <TextView
+        android:id="@+id/item_my_shop_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/item_my_shop_head"
+        android:layout_marginLeft="@dimen/dp_6"
+        android:layout_toRightOf="@id/item_my_shop_head"
+        android:maxLength="10"
+        android:maxLines="1"
+        android:text="用户名"
+        android:textColor="#ff414141"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:id="@+id/star_linear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_my_shop_nickname"
+        android:layout_alignLeft="@id/item_my_shop_nickname"
+        android:layout_marginTop="@dimen/dp_6"
+        android:orientation="horizontal">
+
+        <com.sheepshop.businessside.weight.MyRatingBar
+            android:id="@+id/item_my_shop_ratingbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:clickable="false"
+            app:starCount="5"
+            app:starEmpty="@mipmap/star_empty"
+            app:starFill="@mipmap/star_all"
+            app:starHalf="@mipmap/star_half"
+            app:starImageSize="15dp"
+            app:stepSize="Half" />
+
+        <TextView
+            android:id="@+id/item_my_shop_ratingbar_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/my_shop_ratingbar"
+            android:layout_toRightOf="@id/my_shop_ratingbar"
+            android:text="3.5分"
+            android:textColor="#ff323232"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/item_my_shop_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/my_shop_time"
+        android:layout_alignLeft="@id/item_my_shop_nickname"
+        android:layout_alignRight="@id/my_shop_card_name"
+        android:layout_marginTop="@dimen/dp_20"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="全部评价全部评价全部评价全部评，，价全。部评价全部评价全部评价全部评价全部评价全，部评价全部，评价全部评价全部评价全部评价全部评价全部评价"
+        android:textColor="#ff414141"
+        android:textSize="12sp" />
+
+
+    <TextView
+        android:id="@+id/my_shop_card_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/dp_18"
+        android:layout_marginRight="@dimen/dp_20"
+        android:drawableLeft="@mipmap/quan"
+        android:drawablePadding="@dimen/dp_4"
+        android:text="极品羔羊券"
+        android:textColor="#ff414141"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/my_shop_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/star_linear"
+        android:layout_alignLeft="@id/item_my_shop_nickname"
+        android:layout_marginTop="@dimen/dp_6"
+        android:text="2019/10/28  20:45:00"
+        android:textColor="#ff323232"
+        android:textSize="9sp" />
+
+    <com.nex3z.flowlayout.FlowLayout
+        android:id="@+id/item_my_shop_flow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_my_shop_content"
+        android:layout_alignLeft="@id/item_my_shop_content"
+        android:layout_alignRight="@id/my_shop_card_name"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_10"
+        app:flChildSpacing="4dp"
+        app:flRowSpacing="4dp"
+        tools:listitem="@layout/item_text" />
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/item_my_shop_flow"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:background="@color/bg_gray" />
+
+</RelativeLayout>

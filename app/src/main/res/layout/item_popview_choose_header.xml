@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_popwindow_rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/img_camera_pop_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="17dp"
+            android:src="@drawable/icon_camerapop_delete" />
+
+        <TextView
+            android:id="@+id/txt_choose_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="营业执照"
+            android:textColor="@color/black_3"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/img_choose_pic_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_choose_title"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/icon_identity_card" />
+
+        <TextView
+            android:id="@+id/txt_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_choose_pic_show"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="照片要求：\n 1.需清晰展示人物五官及身份证信息\n 2.需手持身份证正面\n 3.不可自拍、不可只拍身份证 \n4.可使用临时身份证，港澳"
+            android:textColor="@color/black_3"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_popwindow_file"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_hint"
+            android:gravity="center"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:text="打开相册"
+            android:textColor="@color/color_green_theme"
+            android:textSize="17sp" />
+
+        <View
+            android:id="@+id/view_line"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:layout_below="@+id/tv_popwindow_file"
+            android:background="@color/color_f0f0f0" />
+
+        <TextView
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:id="@+id/tv_popwindow_capture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_line"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="拍照"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

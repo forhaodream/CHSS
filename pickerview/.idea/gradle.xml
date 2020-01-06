@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/.." />
+            <option value="$PROJECT_DIR$/../IMKit" />
+            <option value="$PROJECT_DIR$/../IMLib" />
+            <option value="$PROJECT_DIR$/../app" />
+            <option value="$PROJECT_DIR$/../coorlib" />
+            <option value="$PROJECT_DIR$/../jcvideoplayer-lib" />
+            <option value="$PROJECT_DIR$/../module_competition" />
+            <option value="$PROJECT_DIR$/../module_im" />
+            <option value="$PROJECT_DIR$/../module_live" />
+            <option value="$PROJECT_DIR$/../module_news" />
+            <option value="$PROJECT_DIR$/../module_official" />
+            <option value="$PROJECT_DIR$/../module_socialcircle" />
+            <option value="$PROJECT_DIR$/../module_sports" />
+            <option value="$PROJECT_DIR$/../module_user" />
+            <option value="$PROJECT_DIR$/../ocr_ui" />
+            <option value="$PROJECT_DIR$" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

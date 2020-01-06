@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../IMKit/IMKit.iml" filepath="$PROJECT_DIR$/../IMKit/IMKit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../IMLib/IMLib.iml" filepath="$PROJECT_DIR$/../IMLib/IMLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../SuperVolleyBallApp.iml" filepath="$PROJECT_DIR$/../SuperVolleyBallApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../app/app.iml" filepath="$PROJECT_DIR$/../app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../coorlib/coorlib.iml" filepath="$PROJECT_DIR$/../coorlib/coorlib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../jcvideoplayer-lib/jcvideoplayer-lib.iml" filepath="$PROJECT_DIR$/../jcvideoplayer-lib/jcvideoplayer-lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../module_competition/module_competition.iml" filepath="$PROJECT_DIR$/../module_competition/module_competition.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../module_im/module_im.iml" filepath="$PROJECT_DIR$/../module_im/module_im.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../module_live/module_live.iml" filepath="$PROJECT_DIR$/../module_live/module_live.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../module_news/module_news.iml" filepath="$PROJECT_DIR$/../module_news/module_news.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../module_official/module_official.iml" filepath="$PROJECT_DIR$/../module_official/module_official.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../module_socialcircle/module_socialcircle.iml" filepath="$PROJECT_DIR$/../module_socialcircle/module_socialcircle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../module_sports/module_sports.iml" filepath="$PROJECT_DIR$/../module_sports/module_sports.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../module_user/module_user.iml" filepath="$PROJECT_DIR$/../module_user/module_user.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ocr_ui/ocr_ui.iml" filepath="$PROJECT_DIR$/../ocr_ui/ocr_ui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pickerview.iml" filepath="$PROJECT_DIR$/pickerview.iml" />
+    </modules>
+  </component>
+</project>

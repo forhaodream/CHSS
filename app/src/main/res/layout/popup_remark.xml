@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/popup_layout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="450dp"
+    android:background="@drawable/bg_card_white">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_24"
+        android:layout_marginTop="@dimen/dp_22"
+        android:text="店铺备注"
+        android:textColor="#ff323232"
+        android:textSize="16sp" />
+
+    <!--    <ScrollView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:layout_below="@id/title">-->
+
+    <!--        <RelativeLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent">-->
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_80"
+        android:orientation="vertical">
+
+
+        <!--        <com.sheepshop.businessside.weight.LinesEditView-->
+        <!--            android:id="@+id/ed_store_note"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginLeft="10dp"-->
+        <!--            android:layout_marginRight="20dp"-->
+        <!--            android:background="@drawable/shape_rec_corner2_gray"-->
+        <!--            android:gravity="top"-->
+        <!--            android:hint="输入店铺备注"-->
+        <!--            android:minHeight="@dimen/dp_100"-->
+        <!--            android:padding="10dp"-->
+        <!--            android:textColor="@color/black_3"-->
+        <!--            android:textColorHint="@color/color_green_hint"-->
+        <!--            android:textSize="16dp"-->
+        <!--            app:classic_maxCount="100" />-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_100"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/shape_rec_corner2_gray"
+            android:minHeight="@dimen/dp_50">
+
+            <EditText
+                android:id="@+id/ed_store_note"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dp_16"
+                android:background="@null"
+                android:gravity="top"
+                android:hint="输入店铺备注"
+                android:inputType="textMultiLine"
+                android:maxLength="100"
+                android:padding="@dimen/dp_4"
+                android:textColor="@color/black_3"
+                android:textColorHint="@color/color_green_hint"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:id="@+id/now_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="@dimen/dp_2"
+                android:layout_marginBottom="@dimen/dp_2"
+                android:text="100/100"
+                android:textSize="@dimen/sp_10" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:id="@+id/title_quick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="快捷输入"
+                android:textColor="@color/color_666666"
+                android:textSize="14sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_Quick_input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_toRightOf="@id/title_quick"
+                android:overScrollMode="never"
+                android:scrollbars="none" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_80"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/update_info"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_14"
+            android:layout_marginTop="@dimen/dp_16"
+            android:layout_marginRight="@dimen/dp_6"
+            android:layout_marginBottom="@dimen/dp_18"
+            android:layout_weight="1"
+            android:background="@drawable/bg_main_btn"
+            android:text="确认修改"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/dp_6"
+            android:layout_marginTop="@dimen/dp_16"
+            android:layout_marginRight="@dimen/dp_14"
+            android:layout_marginBottom="@dimen/dp_18"
+            android:layout_weight="1"
+            android:background="@drawable/bg_dark_gray"
+            android:text="取消"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+    </LinearLayout>
+    <!--        </RelativeLayout>-->
+    <!--    </ScrollView>-->
+
+</RelativeLayout>

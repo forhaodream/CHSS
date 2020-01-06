@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_44"
+        android:background="@color/color_green_theme">
+
+        <ImageView
+            android:id="@+id/title_back"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_20"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:src="@mipmap/back_white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="兑换详情"
+            android:textColor="#ffffffff"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/item_my_shop_head"
+        android:layout_width="@dimen/dp_22"
+        android:layout_height="@dimen/dp_22"
+        android:layout_below="@id/title"
+        android:layout_marginLeft="@dimen/dp_12"
+        android:layout_marginTop="@dimen/dp_12"
+        android:src="@mipmap/orange_yuan"
+        app:riv_oval="true" />
+
+    <TextView
+        android:id="@+id/item_my_shop_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/item_my_shop_head"
+        android:layout_marginLeft="@dimen/dp_6"
+        android:layout_toRightOf="@id/item_my_shop_head"
+        android:maxLength="10"
+        android:maxLines="1"
+        android:text="我的昵称很长…"
+        android:textColor="#ff414141"
+        android:textSize="15sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_my_shop_head"
+        android:layout_margin="@dimen/dp_10"
+        android:background="@drawable/bg_card_white">
+
+        <TextView
+            android:id="@+id/my_shop_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_12"
+            android:text="所用卡券"
+            android:textColor="#ff000000"
+            android:textSize="18sp" />
+
+
+        <RelativeLayout
+            android:id="@+id/item_add_voucher_card"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_86"
+            android:layout_below="@id/my_shop_title"
+            android:layout_margin="@dimen/dp_8"
+            android:background="@mipmap/bg_green_no_text">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/item_add_voucher_head"
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="@dimen/dp_60"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:scaleType="fitCenter"
+                android:src="@color/black"
+                app:riv_oval="true" />
+
+
+            <TextView
+                android:id="@+id/item_add_voucher_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/item_add_voucher_head"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:layout_toRightOf="@id/item_add_voucher_head"
+                android:text="精品羔羊肉一盘"
+                android:textColor="#ff00be6e"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/item_add_voucher_sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/item_add_voucher_title"
+                android:layout_alignLeft="@id/item_add_voucher_title"
+                android:layout_marginTop="@dimen/dp_4"
+                android:text="绵羊牧场代金券"
+                android:textColor="#ff696868"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/item_add_voucher_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/item_add_voucher_sub"
+                android:layout_alignLeft="@id/item_add_voucher_title"
+                android:layout_marginTop="@dimen/dp_6"
+                android:text="有效期：2019.10.8 -2019.11.8 "
+                android:textColor="#ff696868"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_20"
+                android:text="可退券"
+                android:textColor="#ff666666"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/exchange_detail_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_add_voucher_card"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:textColor="#ff333333"
+            android:textSize="12sp" />
+
+        <View
+            android:id="@+id/view_line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:layout_below="@id/exchange_detail_time"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_6"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_6"
+            android:background="@color/bg_gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view_line"
+            android:layout_alignLeft="@id/view_line"
+            android:layout_alignRight="@id/view_line"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="退券说明："
+                android:textColor="#ff333333"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="仅可对当日验证成功优惠券进行退券，商城后台将会验证信息，退券成功后卡券返回至消费者我的代金券列表中，同时店铺已兑换数会减一哦，操作不可逆，请您三思呀!"
+                android:textColor="#ff333333"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/return_ticket"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="47dp"
+        android:layout_marginTop="164dp"
+        android:layout_marginRight="47dp"
+        android:layout_marginBottom="@dimen/dp_30"
+        android:background="@drawable/bg_main_btn"
+        android:text="确认返券"
+        android:textColor="@color/white"
+        android:textSize="15dp" />
+</RelativeLayout>

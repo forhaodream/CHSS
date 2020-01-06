@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zhy="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_circle_card_white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_46">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="标签"
+            android:textColor="@color/black_3"
+            android:textSize="@dimen/sp_18" />
+
+        <ImageView
+            android:id="@+id/image_close"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="12dp"
+            android:src="@mipmap/icon_delete" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.zhy.view.flowlayout.TagFlowLayout
+            android:id="@+id/tab_up_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:focusable="false"
+            android:padding="@dimen/dp_2" />
+
+        <com.zhy.view.flowlayout.TagFlowLayout
+            android:id="@+id/tab_bottom_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="@dimen/dp_2"
+            zhy:max_select="3" />
+
+        <Button
+            android:id="@+id/text_save"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_44"
+            android:layout_marginLeft="@dimen/dp_48"
+            android:layout_marginTop="@dimen/dp_30"
+            android:layout_marginRight="@dimen/dp_48"
+            android:layout_marginBottom="@dimen/dp_24"
+            android:background="@drawable/bg_login_theme_red"
+            android:text="保存"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_15" />
+    </LinearLayout>
+</LinearLayout>

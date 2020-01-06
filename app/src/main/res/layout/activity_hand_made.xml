@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_44"
+        android:background="@color/color_green_theme">
+
+        <ImageView
+            android:id="@+id/title_back"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_20"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:src="@mipmap/back_white" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="手动验证"
+            android:textColor="#ffffffff"
+            android:textSize="18sp" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_50"
+        android:text="请输入兑换码"
+        android:textColor="#ff333333"
+        android:textSize="24sp" />
+
+
+    <!--    <com.github.cirno_poi.verifyedittextlibrary.VerifyEditText-->
+    <!--        android:id="@+id/activity_verify_edit_text"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--            android:layout_marginLeft="@dimen/dp_46"-->
+    <!--            android:layout_marginTop="@dimen/dp_92"-->
+    <!--            android:layout_marginRight="@dimen/dp_46"-->
+    <!--        android:paddingTop="10dp"-->
+    <!--        app:cursorDrawable="@color/white"-->
+    <!--        app:defaultColor="#808080"-->
+    <!--        app:focusColor="@color/color_green_theme"-->
+    <!--        app:inputCount="8"-->
+    <!--        app:mTextSize="@dimen/sp_12"-->
+    <!--        app:underlineHeight="@dimen/dp_2" />-->
+    <com.maning.pswedittextlibrary.MNPasswordEditText
+        android:id="@+id/activity_verify_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="@dimen/dp_46"
+        android:layout_marginTop="@dimen/dp_92"
+        android:layout_marginRight="@dimen/dp_46"
+        android:focusableInTouchMode="true"
+        android:inputType="number"
+        android:maxLength="8"
+        android:textSize="20sp"
+        app:mnPsw_border_color="#c9c9c9"
+        app:mnPsw_border_selected_color="@color/color_green_theme"
+        app:mnPsw_border_width="2dp"
+        app:mnPsw_item_margin="10dp"
+        app:mnPsw_mode="OriginalText"
+        app:mnPsw_style="StyleUnderLine"
+        app:mnPsw_text_color="#393939" />
+</LinearLayout>

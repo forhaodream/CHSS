@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_44"
+        android:background="@color/color_green_theme">
+
+        <ImageView
+            android:id="@+id/title_back"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_20"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:src="@mipmap/back_white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="店铺管理"
+            android:textColor="#ffffffff"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title"
+        android:layout_marginBottom="@dimen/dp_80">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_26"
+            android:layout_marginRight="@dimen/dp_26"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/sp_30"
+                android:text="基本信息"
+                android:textColor="#ff333333"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_46"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="店铺名称"
+                    android:textColor="#ff323232"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/shop_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dp_50"
+                    android:text="龙门客栈"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="#AFC7BD" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_46"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="营业状态"
+                    android:textColor="#ff323232"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/shop_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dp_50"
+                    android:text="休息中"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="#AFC7BD" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_46"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="店铺类型"
+                    android:textColor="#ff323232"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/shop_kinds"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dp_50"
+                    android:text="火锅"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="#AFC7BD" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_46"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="店主姓名"
+                    android:textColor="#ff323232"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/shop_owner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dp_50"
+                    android:text="曹少钦"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="#AFC7BD" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_46"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/title_shop_tel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="联系电话"
+                    android:textColor="#ff323232"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/shop_tel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_50"
+                    android:layout_toRightOf="@id/title_shop_tel"
+                    android:background="@color/white"
+                    android:maxLength="11"
+                    android:phoneNumber="true"
+                    android:text="024-88888888"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="#AFC7BD" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="店铺地址"
+                    android:textColor="#ff323232"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/shop_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dp_50"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_marginRight="@dimen/dp_26"
+                    android:layout_marginBottom="@dimen/dp_8"
+                    android:text="辽宁省沈阳市浑南区街28号街28号饮水机旁"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="#AFC7BD" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/sp_30"
+                android:text="店铺详情"
+                android:textColor="#ff333333"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:text="店铺LOGO"
+                    android:textColor="#ff323232"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/image_logo"
+                    android:layout_width="@dimen/dp_62"
+                    android:layout_height="@dimen/dp_62"
+                    android:layout_marginLeft="@dimen/dp_41"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_toRightOf="@id/text_logo"
+                    android:scaleType="fitXY"
+                    android:src="#EDF5F2" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_logo"
+                    android:layout_alignLeft="@id/image_logo"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:text="点击查看大图"
+                    android:textColor="#ff333333"
+                    android:textSize="10sp" />
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="#AFC7BD" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text_door"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:text="门脸照"
+                    android:textColor="#ff323232"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/image_door"
+                    android:layout_width="@dimen/dp_62"
+                    android:layout_height="@dimen/dp_62"
+                    android:layout_marginLeft="@dimen/dp_66"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_toRightOf="@id/text_door"
+                    android:scaleType="fitXY"
+                    android:src="#EDF5F2" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_door"
+                    android:layout_alignLeft="@id/image_door"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="点击查看大图"
+                    android:textColor="#ff333333"
+                    android:textSize="10sp" />
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="#AFC7BD" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/title_store"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:text="店内照"
+                    android:textColor="#ff323232"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/image_in_door_one"
+                    android:layout_width="@dimen/dp_62"
+                    android:layout_height="@dimen/dp_62"
+                    android:layout_marginLeft="@dimen/dp_66"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_toRightOf="@id/title_store"
+                    android:scaleType="fitXY"
+                    android:src="#EDF5F2" />
+
+
+                <ImageView
+                    android:id="@+id/image_in_door_two"
+                    android:layout_width="@dimen/dp_62"
+                    android:layout_height="@dimen/dp_62"
+                    android:layout_below="@id/image_in_door_one"
+                    android:layout_marginLeft="@dimen/dp_66"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_toRightOf="@id/title_store"
+                    android:scaleType="fitXY"
+                    android:src="#EDF5F2" />
+
+
+                <ImageView
+                    android:id="@+id/image_in_door_three"
+                    android:layout_width="@dimen/dp_62"
+                    android:layout_height="@dimen/dp_62"
+                    android:layout_below="@id/image_in_door_two"
+                    android:layout_marginLeft="@dimen/dp_66"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_toRightOf="@id/title_store"
+                    android:scaleType="fitXY"
+                    android:src="#EDF5F2" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_in_door_three"
+                    android:layout_alignLeft="@id/image_in_door_three"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:text="点击查看大图"
+                    android:textColor="#ff333333"
+                    android:textSize="10sp" />
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="#AFC7BD" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_46"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/title_shop_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="营业时间"
+                    android:textColor="#ff323232"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/ed_store_open_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="51dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@id/title_shop_time"
+                    android:background="@null"
+                    android:text="营业时间"
+                    android:textColor="@color/color_green_hint"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_toRightOf="@id/ed_store_open_time"
+                    android:text="-" />
+
+                <TextView
+                    android:id="@+id/ed_store_close_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@id/line"
+                    android:background="@null"
+                    android:text="休息时间"
+                    android:textColor="@color/color_green_hint"
+                    android:textSize="16dp" />
+
+                <!--                <EditText-->
+                <!--                    android:id="@+id/shop_time"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_centerVertical="true"-->
+                <!--                    android:layout_marginLeft="@dimen/dp_50"-->
+                <!--                    android:layout_toRightOf="@id/title_shop_time"-->
+                <!--                    android:background="@color/white"-->
+                <!--                    android:text="10:00-23:00"-->
+                <!--                    android:textColor="#ff333333"-->
+                <!--                    android:textSize="14sp" />-->
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="#AFC7BD" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/title_shop_remark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="店铺备注"
+                    android:textColor="#ff323232"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/shop_remark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_50"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:layout_marginRight="@dimen/dp_16"
+                    android:layout_marginBottom="@dimen/dp_16"
+                    android:layout_toRightOf="@id/title_shop_remark"
+                    android:background="@color/white"
+                    android:text="仅限店内使用，不可餐前外带，餐毕未吃完可打包，打包费详情咨询商家"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="#AFC7BD" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/sp_30"
+                android:text="营业资格"
+                android:textColor="#ff333333"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:text="法人代表手持身份证正面照"
+                    android:textColor="#ff323232"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/image_front"
+                    android:layout_width="@dimen/dp_62"
+                    android:layout_height="@dimen/dp_62"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_4"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:scaleType="fitXY"
+                    android:src="#EDF5F2" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="#AFC7BD" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:text="法人代表手持身份证反面照"
+                    android:textColor="#ff323232"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/image_reverse"
+                    android:layout_width="@dimen/dp_62"
+                    android:layout_height="@dimen/dp_62"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_4"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:scaleType="fitXY"
+                    android:src="#EDF5F2" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="#AFC7BD" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:text="营业执照"
+                    android:textColor="#ff323232"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/image_license"
+                    android:layout_width="@dimen/dp_62"
+                    android:layout_height="@dimen/dp_62"
+                    android:layout_marginLeft="@dimen/dp_51"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:scaleType="fitXY"
+                    android:src="#EDF5F2" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="#AFC7BD" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:text="许可证"
+                    android:textColor="#ff323232"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/image_licence"
+                    android:layout_width="@dimen/dp_62"
+                    android:layout_height="@dimen/dp_62"
+                    android:layout_marginLeft="@dimen/dp_67"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:scaleType="fitXY"
+                    android:src="#EDF5F2" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="#AFC7BD" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_80"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/icon_will_choose" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="温馨提示:您如果修改店铺信息，需要3-5日人工审核"
+                android:textColor="#ff333333"
+                android:textSize="9sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_mine_shop"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_44"
+            android:layout_below="@id/img"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_30"
+            android:background="@drawable/bg_main_gray"
+            android:text="确认修改"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+    </LinearLayout>
+</RelativeLayout>

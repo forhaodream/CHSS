@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_86"
+    android:orientation="vertical">
+
+    <com.makeramen.roundedimageview.RoundedImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/item_voucher_change_head"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="@dimen/dp_60"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dp_8"
+        android:scaleType="fitCenter"
+        android:src="@color/black"
+        app:riv_oval="true" />
+
+    <TextView
+        android:id="@+id/item_voucher_change_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/item_voucher_change_head"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_toRightOf="@id/item_voucher_change_head"
+        android:text="野生有机草莓精"
+        android:textColor="#ff333333"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/item_voucher_change_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_voucher_change_title"
+        android:layout_alignLeft="@id/item_voucher_change_title"
+        android:layout_marginTop="@dimen/dp_8"
+        android:text="兑换时间：2019.10.8  11:11"
+        android:textColor="#ff808080"
+        android:textSize="10sp" />
+
+
+    <TextView
+        android:id="@+id/item_voucher_change_sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/item_voucher_change_title"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/dp_12"
+        android:text="精品羔羊肉一盘"
+        android:textColor="#ff333333"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/item_voucher_change_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/item_voucher_change_sub"
+        android:layout_alignBottom="@id/item_voucher_change_time"
+        android:layout_marginRight="@dimen/dp_10"
+        android:text="不可退券" />
+</RelativeLayout>

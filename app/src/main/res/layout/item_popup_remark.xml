@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txt_Quick_input"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_txt_corner2_gray"
+        android:padding="10dp"
+        android:text="仅限店内使用，不可餐前外带，餐\n毕未吃完可打包，打包费详情咨询\n商家."
+        android:textSize="12sp" />
+</LinearLayout>

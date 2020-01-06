@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_gray"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_160"
+        android:layout_margin="@dimen/dp_10"
+        android:background="@drawable/bg_card_white">
+
+        <TextView
+            android:id="@+id/my_shop_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_12"
+            android:text="绵羊牧场串店（临波路店）"
+            android:textColor="#ff000000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/my_shop_switch"
+            android:layout_width="@dimen/dp_43"
+            android:layout_height="@dimen/dp_25"
+            android:layout_alignTop="@id/my_shop_title"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_10"
+            android:background="@drawable/bg_check_switch"
+            android:button="@null" />
+
+        <RelativeLayout
+            android:id="@+id/item_add_voucher_card"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_86"
+            android:layout_below="@id/my_shop_title"
+            android:layout_margin="@dimen/dp_8"
+            android:background="@mipmap/voucher">
+
+            <com.makeramen.roundedimageview.RoundedImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/item_add_voucher_head"
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="@dimen/dp_60"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:scaleType="fitCenter"
+                android:src="@color/black"
+                app:riv_oval="true" />
+
+
+            <TextView
+                android:id="@+id/item_add_voucher_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/item_add_voucher_head"
+                android:layout_marginStart="@dimen/dp_8"
+                android:layout_toEndOf="@id/item_add_voucher_head"
+                android:text="精品羔羊肉一盘"
+                android:textColor="@color/color_red_theme"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/item_add_voucher_sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/item_add_voucher_title"
+                android:layout_alignLeft="@id/item_add_voucher_title"
+                android:layout_marginTop="@dimen/dp_4"
+                android:text="绵羊牧场代金券"
+                android:textColor="#ff696868"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/item_add_voucher_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/item_add_voucher_sub"
+                android:layout_alignLeft="@id/item_add_voucher_title"
+                android:layout_marginTop="@dimen/dp_6"
+                android:text="有效期：2019.10.8 -2019.11.8 "
+                android:textColor="#ff696868"
+                android:textSize="10sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/can_change_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_add_voucher_card"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_4"
+            android:text="每人每天限使用个数10个 "
+            android:textColor="#ff333333"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

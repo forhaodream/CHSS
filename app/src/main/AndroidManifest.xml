@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.sheepshop.businessside">
+
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 允许程序打开网络 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 允许允许使用读写权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 允许允许使用读写权限 -->
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- 允许允许使用相机权限 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" /> <!-- 支持iBeancon 需要蓝牙权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" /> <!-- 支持个推3.0 电子围栏功能 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 浮动通知权限 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 自定义权限 -->
+    <uses-permission android:name="getui.permission.GetuiService.${applicationId}" /> <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission
+        android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- 自定义权限 -->
+    <uses-permission android:name="getui.permission.GetuiService.${applicationId}" />
+
+    <permission
+        android:name="getui.permission.GetuiService.${applicationId}"
+        android:protectionLevel="normal" />
+
+    <application
+        android:name=".MyApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/shop_red_logo"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:targetApi="n">
+        <activity android:name=".ui.centersetting.CenterAboutActivity"></activity>
+        <activity android:name=".ui.centersetting.CenterSettingActivity" />
+        <activity android:name=".ui.mycenter.DownModifyGoodsActivity" />
+        <activity android:name=".ui.mycenter.UpModifyGoodsActivity" />
+        <activity android:name=".ui.mycenter.GoodsSortingActivity" />
+        <activity android:name=".ui.mycenter.AddGoodsActivity" />
+        <activity android:name=".ui.mycenter.GoodsManageActivity" /> <!-- <activity android:name=".ui.openshop.TestPicActivity"></activity> -->
+        <activity android:name=".ui.openshop.AuditFailActivity" />
+        <activity android:name=".ui.mycenter.CenterActivity" />
+        <activity android:name=".ui.opencenter.CenterAuditActivity" />
+        <activity android:name=".ui.opencenter.CenterInputInfoActivity" />
+        <activity android:name=".ui.opencenter.OpenCenterActivity" />
+        <activity android:name=".ui.opencenter.CenterLoginActivity" /> <!-- 配置的第三方参数属性 -->
+        <meta-data
+            android:name="PUSH_APPID"
+            android:value="${GETUI_APP_ID}" />
+        <meta-data
+            android:name="PUSH_APPKEY"
+            android:value="${GETUI_APP_KEY}" />
+        <meta-data
+            android:name="PUSH_APPSECRET"
+            android:value="${GETUI_APP_SECRET}" /> <!-- 配置SDK核心服务 -->
+        <!-- permission属性在2.13.1.0版本后必须配置 -->
+        <service
+            android:name="com.igexin.sdk.PushService"
+            android:exported="false"
+            android:label="NotificationCenter"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:process=":pushservice">
+            <intent-filter>
+                <action android:name="com.igexin.sdk.action.service.message" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name="com.igexin.sdk.PushReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <!-- 以下三项为可选的action声明，有助于提高service存活率 -->
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.igexin.sdk.PushActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:process=":pushservice"
+            android:taskAffinity="com.igexin.sdk.PushActivityTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.igexin.sdk.GActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:process=":pushservice"
+            android:taskAffinity="com.igexin.sdk.PushActivityTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" /> <!-- 个推SDK配置结束 -->
+        <service
+            android:name=".service.DemoPushService"
+            android:exported="true"
+            android:label="PushService"
+            android:process=":pushservice" /> <!-- android:permission在2.13.1.0版本后必须配置 -->
+        <service
+            android:name=".service.DemoIntentService"
+            android:permission="android.permission.BIND_JOB_SERVICE" /> <!-- Activity -->
+        <activity android:name=".ui.myshop.TextActivity" />
+        <activity android:name=".base.WebViewActivity" />
+        <activity android:name=".ui.setting.CallCenterActivity" />
+
+        <meta-data
+            android:name="BUGLY_APPID"
+            android:value="f457ff0e39" />
+        <meta-data
+            android:name="BUGLY_ENABLE_DEBUG"
+            android:value="true" />
+
+        <activity
+            android:name="com.tencent.bugly.beta.ui.BetaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name=".ui.openshop.ShopInformationActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait" /> <!-- <activity -->
+        <!-- android:name=".ui.openshop.ShopBusinessInformationActivity" -->
+        <!-- android:configChanges="orientation|screenSize|keyboardHidden" -->
+        <!-- android:screenOrientation="portrait" /> -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="rTH7LTzAgEyeop40VvGvDkQVgMvvvGHl" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+
+        <activity
+            android:name=".ui.openshop.ShopStoreInformationActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.openshop.ShopBusinessInformationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.openshop.AuditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.openshop.OpenShopActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.openshop.PhotoViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.myshop.AddVoucherActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.myshop.MyShopActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.myshop.ManagerVoucherActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.myshop.ChangeListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.myshop.ExchangeDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.myshop.ShopEvaluationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.myshop.ShopManagementActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.myshop.HandMadeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.openshop.MapActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.setting.AboutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".zxing.android.CaptureActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.myshop.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.openshop.ShopOwnerInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.openshop.StoreInfoActivity"
+            android:screenOrientation="portrait">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name=".ui.mycenter.SecondActivity" />
+        <activity
+            android:name=".ui.openshop.ShopAuditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.openshop.AuditCountDownActivity"
+            android:screenOrientation="portrait" /> <!-- <activity -->
+        <!-- android:name=".ui.setting.ModifyNumberActivity" -->
+        <!-- android:screenOrientation="portrait" /> &lt;!&ndash; <activity android:name=".MainActivity.ui.myshop.MyShopActivity" /> &ndash;&gt; -->
+        <activity
+            android:name=".WelcomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.FullScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.sheepshop.businessside.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>
